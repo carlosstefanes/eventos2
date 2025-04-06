@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador Simples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    .contador {
+      font-size: 48px;
+      margin: 20px;
+    }
+    button {
+      font-size: 32px;
+      width: 60px;
+      height: 60px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #3498db;
+      color: white;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="diminuir()">-</button>
+  <span class="contador" id="valor">0</span>
+  <button onclick="aumentar()">+</button>
+
+  <script>
+    let contador = 0;
+
+    function atualizarDisplay() {
+      document.getElementById("valor").textContent = contador;
+    }
+
+    function aumentar() {
+      contador++;
+      atualizarDisplay();
+    }
+
+    function diminuir() {
+      contador--;
+      atualizarDisplay();
+    }
+  </script>
+
+</body>
+</html>
